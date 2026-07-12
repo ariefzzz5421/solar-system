@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "rm -rf dist && mkdir -p dist/src && cp index.html dist/ && cp src/main.js src/styles.css dist/src/",
+    "preview": "npx serve dist"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
