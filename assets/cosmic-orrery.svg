@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Cosmic Orrery preview</title>
+  <desc id="desc">A glowing stylized solar system with orbital trails, planets, stars, and a blue purple nebula.</desc>
+  <defs>
+    <radialGradient id="bg" cx="34%" cy="32%" r="74%">
+      <stop offset="0" stop-color="#25327a"/>
+      <stop offset=".45" stop-color="#070b22"/>
+      <stop offset="1" stop-color="#02030a"/>
+    </radialGradient>
+    <radialGradient id="sun" cx="38%" cy="35%" r="64%">
+      <stop offset="0" stop-color="#fff8b8"/>
+      <stop offset=".45" stop-color="#ffb02e"/>
+      <stop offset="1" stop-color="#ff4d00"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feColorMatrix in="blur" values="1 0 0 0 1 0 .62 0 0 .58 0 0 .18 0 .2 0 0 0 1 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="ring" x1="0" x2="1">
+      <stop offset="0" stop-color="#78f4ff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#78f4ff" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#b987ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity=".42">
+    <circle cx="108" cy="96" r="2" fill="#fff"/><circle cx="224" cy="468" r="1.5" fill="#9fd7ff"/><circle cx="965" cy="108" r="2.2" fill="#fff"/><circle cx="1028" cy="515" r="1.8" fill="#ffd9a8"/><circle cx="760" cy="74" r="1.4" fill="#fff"/><circle cx="516" cy="552" r="2" fill="#c9b7ff"/><circle cx="1132" cy="260" r="1.5" fill="#fff"/><circle cx="382" cy="118" r="1.2" fill="#fff"/>
+  </g>
+  <g transform="translate(464 314) rotate(-10)" fill="none" stroke="url(#ring)" stroke-width="2">
+    <ellipse rx="146" ry="54"/><ellipse rx="236" ry="88" opacity=".7"/><ellipse rx="335" ry="126" opacity=".5"/><ellipse rx="452" ry="170" opacity=".34"/>
+  </g>
+  <circle cx="464" cy="314" r="70" fill="url(#sun)" filter="url(#glow)"/>
+  <g filter="url(#glow)">
+    <circle cx="606" cy="270" r="14" fill="#b9a898"/><circle cx="694" cy="352" r="23" fill="#4aa3ff"/><circle cx="801" cy="236" r="18" fill="#dd6b4d"/><circle cx="914" cy="394" r="46" fill="#d4aa78"/>
+    <g transform="translate(1032 212) rotate(-16)"><circle r="38" fill="#e6d19c"/><ellipse rx="72" ry="20" fill="none" stroke="#ffe8a8" stroke-width="8" opacity=".76"/></g>
+  </g>
+  <text x="64" y="536" fill="#eef4ff" font-family="Inter, ui-sans-serif, system-ui" font-size="72" font-weight="800" letter-spacing="-4">Cosmic Orrery</text>
+  <text x="68" y="584" fill="#8eeaff" font-family="Inter, ui-sans-serif, system-ui" font-size="26" font-weight="700" letter-spacing="3">INTERACTIVE SOLAR SYSTEM</text>
+</svg>

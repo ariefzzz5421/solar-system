@@ -1,1 +1,41 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="description" content="A beautiful interactive Three.js simulation of the universe and solar system with adjustable accelerated time."/><title>Cosmic Orrery</title></head><body><main class="app-shell"><div id="universe" class="universe"></div><section class="hud glass"><div class="brand"><span>✦</span><div><p>Interactive Three.js</p><h1>Cosmic Orrery</h1></div></div><p class="lede">A cinematic real-time universe with accelerated Kepler-style orbital periods, moons, rings, atmospheric bloom, and thousands of depth-layered stars.</p><div class="control-row segmented"><button id="pauseBtn">Ⅱ Pause</button><button id="resetBtn">↺ Reset</button></div><label class="slider-label"><span>↯ Time warp</span><strong id="speedReadout">120 days/sec</strong></label><input id="speed" type="range" min="1" max="2200" step="1" value="120"/><div class="quick-speeds"><button data-speed="1">1×</button><button data-speed="30">30×</button><button data-speed="120">120×</button><button data-speed="365">365×</button><button data-speed="1000">1000×</button></div><label class="slider-label"><span>⌖ Camera focus</span></label><select id="focus"></select><div class="metrics"><div><span>◷</span><span id="dateReadout">J2000 + 0 days</span></div><div><span class="dot"></span><span id="runState">Physics running</span></div></div></section><section class="planet-card glass"><h2 id="cardTitle">Solar System</h2><p id="cardText">Drag to orbit, scroll to zoom, and use the HUD to accelerate from human time to sweeping planetary centuries.</p></section></main><script type="module" src="/src/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="A beautiful interactive Three.js simulation of the universe and solar system with adjustable accelerated time." />
+    <meta property="og:title" content="Cosmic Orrery" />
+    <meta property="og:description" content="Explore a cinematic solar system with bloom, orbits, moons, rings, and accelerated time." />
+    <meta property="og:image" content="/assets/cosmic-orrery.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/cosmic-orrery.svg" />
+    <title>Cosmic Orrery</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <div id="universe" class="universe"></div>
+      <section class="hud glass">
+        <div class="brand">
+          <img src="/assets/cosmic-orrery.svg" alt="" aria-hidden="true" class="brand-art" />
+          <div>
+            <p>Interactive Three.js</p>
+            <h1>Cosmic Orrery</h1>
+          </div>
+        </div>
+        <p class="lede">A cinematic real-time universe with accelerated Kepler-style orbital periods, moons, rings, atmospheric bloom, and thousands of depth-layered stars.</p>
+        <div class="control-row segmented"><button id="pauseBtn">Ⅱ Pause</button><button id="resetBtn">↺ Reset</button></div>
+        <label class="slider-label"><span>↯ Time warp</span><strong id="speedReadout">120 days/sec</strong></label>
+        <input id="speed" type="range" min="1" max="2200" step="1" value="120" />
+        <div class="quick-speeds"><button data-speed="1">1×</button><button data-speed="30">30×</button><button data-speed="120">120×</button><button data-speed="365">365×</button><button data-speed="1000">1000×</button></div>
+        <label class="slider-label"><span>⌖ Camera focus</span></label>
+        <select id="focus"></select>
+        <div class="metrics"><div><span>◷</span><span id="dateReadout">J2000 + 0 days</span></div><div><span class="dot"></span><span id="runState">Physics running</span></div></div>
+      </section>
+      <section class="planet-card glass">
+        <div class="card-kicker">Live orbital telemetry</div>
+        <h2 id="cardTitle">Solar System</h2>
+        <p id="cardText">Drag to orbit, scroll to zoom, and use the HUD to accelerate from human time to sweeping planetary centuries.</p>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
